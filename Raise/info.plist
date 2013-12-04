@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>eu.qur2.windowraise</string>
+	<key>connections</key>
+	<dict>
+		<key>A8D6890D-3114-42E8-AD5D-482FEAA81AF5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>658BAD07-49E2-44DC-B262-AA20D8CB98A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Aurelien Scoubeau</string>
+	<key>description</key>
+	<string>Raise window by name</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Raise</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>rw</string>
+				<key>runningsubtext</key>
+				<string>Getting windows titles...</string>
+				<key>script</key>
+				<string>osascript windows.applescript $(echo "{query}" | sed 's/./&amp;.*/g')</string>
+				<key>subtext</key>
+				<string>Windows for "{query}"</string>
+				<key>title</key>
+				<string>Raise a window by title</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A8D6890D-3114-42E8-AD5D-482FEAA81AF5</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>osascript window_raise.applescript "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>658BAD07-49E2-44DC-B262-AA20D8CB98A6</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>658BAD07-49E2-44DC-B262-AA20D8CB98A6</key>
+		<dict>
+			<key>ypos</key>
+			<real>300</real>
+		</dict>
+		<key>A8D6890D-3114-42E8-AD5D-482FEAA81AF5</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://www.qur2.eu</string>
+</dict>
+</plist>
